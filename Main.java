@@ -1,7 +1,7 @@
-// PARTNER NAME:
-// PARTNER NAME:
-// CS111 SECTION #:
-// DATE: 
+// PARTNER NAME: Jonathan Smith
+// PARTNER NAME: N/A
+// CS111 SECTION #: 
+// DATE: 2/18/2026
 
 public class Main
 {
@@ -65,11 +65,16 @@ public class Main
 		expireYear = 2022;
 		
 		//additional variables to help cleanup long print's below
-		uscisNum = uscisNum1 + "-" + uscisNum2 + "-" + uscisNum3;
-		dateOfBirth = birthDay + " " + birthMonth + " " + birthYear;
-		validDate = validMonth + "/" + validDay + "/" + validYear;
-		expireDate = expireMonth + "/" + expireDay + "/" + expireYear;
-		
+		//uscisNum = uscisNum1 + "-" + uscisNum2 + "-" + uscisNum3;
+		uscisNum = String.format( "%03d-%03d-%03d", uscisNum1, uscisNum2, uscisNum3);
+		//dateOfBirth = birthDay + " " + birthMonth + " " + birthYear;
+		dateOfBirth = String.format("%02d %s %4d",birthDay, birthMonth, birthYear);
+		//validDate = validMonth + "/" + validDay + "/" + validYear;
+		validDate = String.format( "%02d/%02d/%4d", validDay, validMonth, validYear);
+		//expireDate = expireMonth + "/" + expireDay + "/" + expireYear;
+		expireDate = String.format( "%02d/%02d/%4d", expireDay, expireMonth, expireYear);
+
+
 		//INPUT + CALCULATION SECTION
 		//N/A
 		
@@ -79,7 +84,7 @@ public class Main
 		System.out.println("║                               " + TITLE_EAC + "          ║");
 		
 		System.out.println("║                         " + LABEL_SURNAME + "║");
-		System.out.println("║                         " + surname + "║");
+		System.out.printf("║%25s%s%31s║%n",   " ", surname, " ");
 		System.out.println("║" + ASCII_ART_0 + LABEL_GIVEN_NAME + "║");
 		System.out.println("║" + ASCII_ART_1 + givenName + "║");
 		System.out.println("║" + ASCII_ART_2 + LABEL_USCIS_NUM + LABEL_CATEGORY + LABEL_CARD_NUM + "║");
@@ -93,8 +98,8 @@ public class Main
 		System.out.println("║" + ASCII_ART_8 + LABEL_BIRTH_DATE + LABEL_SEX + "║");
 		System.out.println("║" + ASCII_ART_9 + dateOfBirth + sex + "║");
 		
-		System.out.println("║                         " + LABEL_VALID_DATE + validDate + "║");
-		System.out.println("║                         " + LABEL_EXPIRE_DATE + expireDate + "║");
+		System.out.println("║                         " + LABEL_VALID_DATE +   validDate + "║");
+		System.out.println("║                         " + LABEL_EXPIRE_DATE +  expireDate + "║");
 		
 		System.out.println("║" + ASCII_CREDIT + LABEL_REENTRY_DISCLAIMER + "║");
 		System.out.println("╚══════════════════════════════════════════════════════════════════════╝");
