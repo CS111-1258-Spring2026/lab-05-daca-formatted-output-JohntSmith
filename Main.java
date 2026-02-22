@@ -1,7 +1,7 @@
 // PARTNER NAME: Jonathan Smith
 // PARTNER NAME: N/A
-// CS111 SECTION #: 
-// DATE: 2/18/2026
+// CS111 SECTION #: 1258
+// DATE: 2/22/2026
 
 public class Main
 {
@@ -74,7 +74,7 @@ public class Main
 		//expireDate = expireMonth + "/" + expireDay + "/" + expireYear;
 		expireDate = String.format( "%02d/%02d/%4d", expireDay, expireMonth, expireYear);
 
-
+		//Word counter
 		//INPUT + CALCULATION SECTION
 		//N/A
 		
@@ -83,25 +83,25 @@ public class Main
 		System.out.println("║           " + TITLE_USA + "                                   ║");
 		System.out.println("║                               " + TITLE_EAC + "          ║");
 		
-		System.out.println("║                         " + LABEL_SURNAME + "║");
-		System.out.printf("║%25s%s%31s║%n",   " ", surname, " ");
-		System.out.println("║" + ASCII_ART_0 + LABEL_GIVEN_NAME + "║");
-		System.out.println("║" + ASCII_ART_1 + givenName + "║");
-		System.out.println("║" + ASCII_ART_2 + LABEL_USCIS_NUM + LABEL_CATEGORY + LABEL_CARD_NUM + "║");
-		System.out.println("║" + ASCII_ART_3 + uscisNum + category + cardNum + "║");
+		System.out.printf("║%-25s%-45s║%n", " ", LABEL_SURNAME);
+		System.out.printf("║%-25s%-45s║%n",   " ", surname);
+		System.out.printf("║%4s%-45s║%n", ASCII_ART_0 , LABEL_GIVEN_NAME);
+		System.out.printf("║%3s%-45s║%n", ASCII_ART_1 , givenName);
+		System.out.printf("║%-9s%-15s%-15s%-15s║%n", ASCII_ART_2, LABEL_USCIS_NUM, LABEL_CATEGORY, LABEL_CARD_NUM);
+		System.out.printf("║%-25s%-15s%-15s%-15s║%n", ASCII_ART_3 , uscisNum , category , cardNum);
 		
-		System.out.println("║" + ASCII_ART_4 + LABEL_BIRTH_COUNTRY + "║");
-		System.out.println("║" + ASCII_ART_5 + birthCountry + "║");
-		System.out.println("║" + ASCII_ART_6 + LABEL_TERMS_CONDITIONS + "║");
-		System.out.println("║" + ASCII_ART_7 + termsAndConditions + "║");
+		System.out.printf("║%-25s%-45s║%n", ASCII_ART_4, LABEL_BIRTH_COUNTRY);
+		System.out.printf("║%-5s%-45s║%n", ASCII_ART_5, birthCountry);
+		System.out.printf("║%-5s%-45s║%n", ASCII_ART_6, LABEL_TERMS_CONDITIONS);
+		System.out.printf("║%-6s%-45s║%n", ASCII_ART_7, termsAndConditions);
+
+		System.out.printf("║%-9s%-15s%-30s║%n", ASCII_ART_8 , LABEL_BIRTH_DATE , LABEL_SEX);
+		System.out.printf("║%-9s%-15s%-30s║%n", ASCII_ART_9 , dateOfBirth , sex);
 		
-		System.out.println("║" + ASCII_ART_8 + LABEL_BIRTH_DATE + LABEL_SEX + "║");
-		System.out.println("║" + ASCII_ART_9 + dateOfBirth + sex + "║");
+		System.out.printf("║%-25s%-15s%-30s║%n", " ", LABEL_VALID_DATE, validDate);
+		System.out.printf("║%-25s%-15s%-30s║%n", " ", LABEL_EXPIRE_DATE,  expireDate);
 		
-		System.out.println("║                         " + LABEL_VALID_DATE +   validDate + "║");
-		System.out.println("║                         " + LABEL_EXPIRE_DATE +  expireDate + "║");
-		
-		System.out.println("║" + ASCII_CREDIT + LABEL_REENTRY_DISCLAIMER + "║");
+		System.out.printf("║%-25s%-45s║%n", ASCII_CREDIT, LABEL_REENTRY_DISCLAIMER);
 		System.out.println("╚══════════════════════════════════════════════════════════════════════╝");
 		
 	}
